@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white;
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .game-button {
+    @apply px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg;
+    @apply font-semibold text-white shadow-lg;
+    @apply hover:from-purple-700 hover:to-pink-700;
+    @apply active:scale-95 transition-all duration-200;
+    @apply border border-purple-400/50;
+  }
+  
+  .game-card {
+    @apply bg-slate-800/80 backdrop-blur-sm rounded-xl;
+    @apply border border-purple-500/30 shadow-2xl;
+    @apply p-6;
+  }
+  
+  .slider-track {
+    @apply w-full h-2 bg-slate-700 rounded-full appearance-none;
+    @apply cursor-pointer;
+  }
+  
+  .slider-thumb {
+    @apply appearance-none w-6 h-6 rounded-full;
+    @apply bg-gradient-to-r from-purple-500 to-pink-500;
+    @apply cursor-pointer shadow-lg;
+    @apply border-2 border-white;
+  }
+}
+
